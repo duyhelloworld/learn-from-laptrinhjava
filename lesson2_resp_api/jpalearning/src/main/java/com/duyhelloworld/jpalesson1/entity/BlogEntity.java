@@ -1,4 +1,4 @@
-package com.duyhelloworld.jpalesson1.entity;
+package com.duyhelloworld.jpaleaning.entity;
 
 import java.util.Date;
 

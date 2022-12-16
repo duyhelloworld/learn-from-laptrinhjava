@@ -1,4 +1,4 @@
-package com.duyhelloworld.jpalesson1;
+package com.duyhelloworld.jpaleaning;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class JpaLesson1Application {
 	public static void main(String[] args) {
 		SpringApplication.run(JpaLesson1Application.class, args);
 	}
-
 }

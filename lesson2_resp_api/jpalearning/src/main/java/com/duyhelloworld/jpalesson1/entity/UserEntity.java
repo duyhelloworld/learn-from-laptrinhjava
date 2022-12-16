@@ -1,4 +1,4 @@
-package com.duyhelloworld.jpalesson1.entity;
+package com.duyhelloworld.jpaleaning.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
