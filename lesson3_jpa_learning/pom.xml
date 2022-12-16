@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.duyhelloworld</groupId>
-	<artifactId>jpa_learning</artifactId>
+	<artifactId>jpalearning</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>lesson3_jpa_learning</name>
 	<description>Demo project for Spring Boot</description>
@@ -36,20 +36,12 @@
 			<version>${mysql.version}</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.hibernate.orm</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>6.1.6.Final</version>
-		</dependency>
+		</dependency> -->
 
-		<!--
-		https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-entitymanager -->
-		<dependency>
-			<groupId>org.hibernate.orm</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>6.0.0.Alpha7</version>
-		</dependency>
 
 	</dependencies>
 

@@ -1,24 +1,24 @@
-package com.duyhelloworld.jpaleaning.entity;
+package com.duyhelloworld.jpalearning.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+// import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "User")
+// @Table(name = "User")
 public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "u_usrname", nullable = false)
+    @Column(name = "u_usrname")
     private String username;
 
-    @Column(name = "u_email", nullable = true)
+    @Column(name = "u_email")
     private String email;
 
     @Column(name = "u_phone")
@@ -61,6 +61,11 @@ public class UserEntity {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    @Override
+    public String toString() {
+        return "id : " + this.getId() + "\nname : " + this.getUsername() + "\nemail : " + this.getEmail();
     }
 
 }
