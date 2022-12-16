@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.duyhelloworld</groupId>
-	<artifactId>jpaleaning</artifactId>
+	<artifactId>jpa_learning</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>jpaleaning</name>
+	<name>lesson3_jpa_learning</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>

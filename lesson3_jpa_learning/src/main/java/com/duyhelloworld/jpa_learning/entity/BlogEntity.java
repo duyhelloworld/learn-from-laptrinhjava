@@ -1,4 +1,4 @@
-package com.duyhelloworld.jpaleaning.entity;
+package com.duyhelloworld.jpa_learning.entity;
 
 import java.util.Date;
 
