@@ -1,71 +1,71 @@
 package com.duyhelloworld.jpalearning.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+// import jakarta.persistence.Column;
+// import jakarta.persistence.Entity;
+// import jakarta.persistence.GeneratedValue;
+// import jakarta.persistence.GenerationType;
+// import jakarta.persistence.Id;
 // import jakarta.persistence.Table;
 
-@Entity
+// @Entity
 // @Table(name = "User")
 public class UserEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    // @Id
+    // @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // private Integer id;
 
-    @Column(name = "u_usrname")
-    private String username;
+    // @Column(name = "u_usrname")
+    // private String username;
 
-    @Column(name = "u_email")
-    private String email;
+    // @Column(name = "u_email")
+    // private String email;
 
-    @Column(name = "u_phone")
-    private String phone;
+    // @Column(name = "u_phone")
+    // private String phone;
 
-    @Column(name = "u_avatar")
-    private String avatar;
+    // @Column(name = "u_avatar")
+    // private String avatar;
 
-    public Integer getId() {
-        return this.id;
-    }
+    // public Integer getId() {
+    //     return this.id;
+    // }
 
-    public String getUsername() {
-        return this.username;
-    }
+    // public String getUsername() {
+    //     return this.username;
+    // }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    // public void setUsername(String username) {
+    //     this.username = username;
+    // }
 
-    public String getEmail() {
-        return this.email;
-    }
+    // public String getEmail() {
+    //     return this.email;
+    // }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    // public void setEmail(String email) {
+    //     this.email = email;
+    // }
 
-    public String getPhone() {
-        return this.phone;
-    }
+    // public String getPhone() {
+    //     return this.phone;
+    // }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+    // public void setPhone(String phone) {
+    //     this.phone = phone;
+    // }
 
-    public String getAvatar() {
-        return this.avatar;
-    }
+    // public String getAvatar() {
+    //     return this.avatar;
+    // }
 
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
-    }
+    // public void setAvatar(String avatar) {
+    //     this.avatar = avatar;
+    // }
 
-    @Override
-    public String toString() {
-        return "id : " + this.getId() + "\nname : " + this.getUsername() + "\nemail : " + this.getEmail();
-    }
+    // @Override
+    // public String toString() {
+    //     return "id : " + this.getId() + "\nname : " + this.getUsername() + "\nemail : " + this.getEmail();
+    // }
 
 }
