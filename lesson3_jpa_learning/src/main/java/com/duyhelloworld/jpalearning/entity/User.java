@@ -3,7 +3,6 @@ package com.duyhelloworld.jpalearning.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.MapsId;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -46,14 +46,13 @@ public class User {
             inverseJoinColumns = @JoinColumn(table = "Role", name = "r_id"))
     private List<Role> roles = new ArrayList<Role>();
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "login_id")
-    private Login login;
+    // @OneToOne
+    // @MapsId
+    // @JoinColumn(name = "login_id", insertable = false, updatable = false)
+    // private Login loginSession;
 
     @OneToMany(mappedBy = "user")
     private List<Blog> blogs = new ArrayList<Blog>();
-
-    
 
     public Long getId() {
         return this.id;

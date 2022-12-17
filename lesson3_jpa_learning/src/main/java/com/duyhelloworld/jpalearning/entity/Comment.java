@@ -22,7 +22,7 @@ public class Comment {
     private String content;
 
     @ManyToOne
-    @JoinColumn(name = "comment_id")
+    @JoinColumn(name = "comment_id", insertable = false, updatable = false)
     private Blog blog;
 
     public Long getId() {

@@ -4,7 +4,9 @@ import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 
 public class Login {
     @Id
@@ -18,9 +20,9 @@ public class Login {
     @Column
     private String password;
 
-
-    @OneToOne(mappedBy = "login")
-    private User user;
+    // @OneToOne(mappedBy = "loginSession")
+    // @JoinColumn(name = "user_id", insertable = false, updatable = false)
+    // private User user;
 
     public String getId() {
         return this.id;
@@ -46,11 +48,11 @@ public class Login {
         this.password = password;
     }
 
-    public User getUser() {
-        return this.user;
-    }
+    // public User getUser() {
+    //     return this.user;
+    // }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
+    // public void setUser(User user) {
+    //     this.user = user;
+    // }
 }
