@@ -1,24 +1,33 @@
 package com.duyhelloworld.jpalearning.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
-public class Login extends User {
+public class Login {
     @Id
+    @Column(name = "login_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String loginId;
+    private String id;
 
+    @Column
     private String username;
 
+    @Column
     private String password;
 
-    public String getLoginId() {
-        return this.loginId;
+
+    @OneToOne(mappedBy = "login")
+    private User user;
+
+    public String getId() {
+        return this.id;
     }
 
-    public void setId(String loginId) {
-        this.loginId = loginId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -35,5 +44,13 @@ public class Login extends User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public User getUser() {
+        return this.user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

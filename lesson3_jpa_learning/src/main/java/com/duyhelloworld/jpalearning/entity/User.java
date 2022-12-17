@@ -3,6 +3,7 @@ package com.duyhelloworld.jpalearning.entity;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,16 +11,17 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
-import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
-@MappedSuperclass
 @Entity
 @Table(name = "User")
 public class User {
 
     @Id
+    @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -42,7 +44,16 @@ public class User {
     @JoinTable(name = "user_role",
             joinColumns = @JoinColumn(table = "User", name = "u_id"),
             inverseJoinColumns = @JoinColumn(table = "Role", name = "r_id"))
-    private List<Role> listRole = new ArrayList<Role>();
+    private List<Role> roles = new ArrayList<Role>();
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "login_id")
+    private Login login;
+
+    @OneToMany(mappedBy = "user")
+    private List<Blog> blogs = new ArrayList<Blog>();
+
+    
 
     public Long getId() {
         return this.id;
@@ -89,16 +100,18 @@ public class User {
     }
 
     public List<Role> getListRole() {
-        return this.listRole;
+        return this.roles;
     }
 
-    public void setListRole(List<Role> listRole) {
-        this.listRole = listRole;
+    public void setListRole(List<Role> roles) {
+        this.roles = roles;
     }
+
+
 
     @Override
     public String toString() {
-        return "id : " + this.getId() + "\nname : " + this.getUsername() + "\nemail : " + this.getEmail();
+        return "id : " + this.getId() + ",\nname : " + this.getUsername() + "\nemail : " + this.getEmail();
     }
 
 }
